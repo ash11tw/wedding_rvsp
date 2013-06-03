@@ -61,12 +61,6 @@ exports.create = function() {
       res.status(500).render('500', { error: err.stack })
     })
 
-    // assume 404 since no middleware responded
-    app.use(function(req, res, next){
-      res.status(404).render('404', { url: req.originalUrl })
-    })
-    // routes should be at last
-    app.use(app.router)
   })
   //
 //  app.configure('development', function(){
