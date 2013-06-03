@@ -1,0 +1,26 @@
+<div class="container-fluid" style="background-color:white;height:100%">
+<table class="table table-hover">
+	<thead>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Head Count</th>
+		<th>Allergy</th>
+		<th>Pick-up Require</th>
+		<th>Cute Boy/Girl</th>
+		<th>Words</th>
+	</thead>
+	<tbody>
+<% _.each(collection,function(row){ %>
+		<tr>
+			<td><%= row.name %></td>
+			<td><%= row.email %></td>
+			<td><%= row.number %></td>
+			<td><%= row.allergy %></td>
+			<td><%= row.pickup %></td>
+			<td><%= row.cute %></td>
+			<td><%= row.shared %></td>
+		</tr>
+<% })%>
+	</tbody>
+</table>
+</div>

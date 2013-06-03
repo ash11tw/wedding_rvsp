@@ -1,0 +1,64 @@
+<div class="container">
+<div class="row">
+	 <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+           <img src="../img/<%= carouselImage_1 %>" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2><%= title %></h2>
+              <p class="lead">Date: <%= date %></p>
+	      <p class="lead">Location: <a href="<%= venue_website %>" target="new"><%= venue_name %></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../img/<%= carouselImage_2 %>" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2><%= title %></h2>
+              <p class="lead">Date: <%= date %></p>
+	      <p class="lead">Location: <a href="<%= venue_website %>" target="new"><%= venue_name %></a></p>
+            </div>
+          </div>
+        </div>
+	<!-- You could add more images if need -->
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    <ul class="nav nav-tabs" id="tabs">
+    <li><a href="#confirm-form" data-toggle="tab">RVSP</a></li>
+    <li><a href="#story" data-toggle="tab">Our Story</a></li>
+    <li><a href="#driving" data-toggle="tab">How to get there</a></li>
+    <li><a href="#photos" data-toggle="tab">More photos</a></li>
+    </ul>
+   <div id="tab-content" class="tab-content">
+	<div id="confirm-form" class="tab-pane">
+        </div>
+	<div id="story" class="tab-pane">
+	</div>
+	<div id="driving" class="tab-pane">
+		<h3><a href="<%= venue_map_link %>" target="_blank"><%= venue_address %></a></h3>
+		<a href="#mapModal" data-toggle="modal"><img class="imgframe" src="../<%= venue_map_small %>" /></a>
+		<div id="mapModal" class="modal hide fade modal-img" >
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">Map of <%= venue_name %></h3>
+			</div>
+			<div class="modal-body">
+				<img class="imgframe" src="../img/<%= venue_map %>" />
+			</div>
+		</div>
+		<%= venue_driving_direction %>
+	</div>
+	<div id="photos" class="tab-pane" style="height:300px">
+		<a href="<%= flickr_link %>" target="_blank" class="btn btn-primary btn-large">Check our flickr album</a>
+	</div>
+   </div>
+   <img class="love" src="../img/love.gif" alt="">
+</div>
+</div>

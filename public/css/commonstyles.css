@@ -1,0 +1,49 @@
+body {
+	background-image:-moz-linear-gradient(top, black 0%, white 700px);
+	background-image:-ms-linear-gradient(top, black 0%, white 700px);
+	background-image:-webkit-linear-gradient(top, black 0%, white 700px);
+	background-image:-o-linear-gradient(top, black 0%, white 700px);
+	background-image:linear-gradient(top, black 0%, white 700px);
+}
+
+label.error {
+	font-weight: bold;
+	color: red;
+	padding: 2px 8px;
+	margin-top: 2px;
+}
+img.imgframe {
+	padding: 9px;
+	border: 1px solid #ccc;
+	display: block;
+	
+}
+div.modal-img {
+	width:1150px;
+	margin-left:-575px;
+}
+div.modal-img .modal-body {
+	max-height:100%
+}
+div.carousel-caption h2 {
+	color:#e5e5e5
+}
+img.love {
+	transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	position:absolute;
+	left:-130px;
+	top:-30px;
+}
+div.row {
+	position:relative;
+}
+
+@media (min-width:950px){
+	img[data-src-large] {
+		content: attr(data-src-large,url);
+	}
+}

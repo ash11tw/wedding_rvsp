@@ -1,0 +1,85 @@
+// DesktopInit.js
+// --------------
+require.config({
+
+  // Sets the js folder as the base directory for all future relative paths
+  baseUrl: "./js",
+
+  // 3rd party script alias names (Easier to type "jquery" than "libs/jquery, etc")
+  // probably a good idea to keep version numbers in the file names for updates checking
+  paths: {
+
+      // Core Libraries
+      // --------------
+      "jquery": "libs/jquery",
+
+      "jqueryui": "libs/jqueryui",
+
+      "underscore": "libs/lodash",
+
+      "backbone": "libs/backbone",
+
+      // Plugins
+      // -------
+
+      "bootstrap": "libs/plugins/bootstrap",
+     
+      "jquery.validate":"libs/plugins/jquery.validate",
+      "jquery.caroul":"libs/plugins/jquery.carouFredSel-6.2.1",
+
+      "text": "libs/plugins/text",
+      "json": "libs/plugins/json",
+
+      // Application Folders
+      // -------------------
+      "collections": "app/collections",
+
+      "models": "app/models",
+
+      "routers": "app/routers",
+
+      "templates": "app/templates",
+
+      "views": "app/views",
+      
+      "data": "app/data"
+
+  },
+
+  // Sets the configuration for your third party scripts that are not AMD compatible
+  shim: {
+
+      // Twitter Bootstrap jQuery plugins
+      "bootstrap": ["jquery"],
+
+      // jQueryUI
+      "jqueryui": ["jquery"],
+      "jquery.validate":["jquery"],
+      "jquery.caroul":["jquery"],
+
+      // Backbone
+      "backbone": {
+
+        // Depends on underscore/lodash and jQuery
+        "deps": ["underscore", "jquery"],
+
+        // Exports the global window.Backbone object
+        "exports": "Backbone"
+
+      }
+
+  }
+
+});
+
+// Includes Desktop Specific JavaScript files here (or inside of your Desktop router)
+require(["jquery", "backbone", "routers/DesktopRouter", "jqueryui", "bootstrap"],
+
+  function($, Backbone, DesktopRouter) {
+
+    // Instantiates a new Desktop Router instance
+    new DesktopRouter();
+
+  }
+
+);

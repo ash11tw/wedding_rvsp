@@ -1,0 +1,42 @@
+<div class="container-fluid">
+<div class="row-fluid">
+     <h2><%= title %></h2>
+     <p class="lead">Date: <%= date %></p>
+     <p class="lead">Location: <a href="<%= venue_website %>" target="new"><%= venue_name %></a></p>
+	 <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+           <img src="../img/<%= carouselImage_1_small %>"  data-src-large="../img/<%= carouselImage_1 %>" alt="">
+        </div>
+        <div class="item">
+           <img src="../img/<%= carouselImage_2_small %>"  data-src-large="../img/<%= carouselImage_2 %>" alt="">
+        </div>
+	<!-- you can add more images as need -->
+      </div>
+    </div><!-- /.carousel -->
+
+    <ul class="nav nav-tabs" id="tabs">
+    <li><a href="#confirm-form" data-toggle="tab">RVSP</a></li>
+    <li><a href="#story" data-toggle="tab">Story</a></li>
+    <li><a href="#driving" data-toggle="tab">Get there</a></li>
+    <li><a href="#contact" data-toggle="tab">Pics</a></li>
+    </ul>
+   <div id="tab-content" class="tab-content">
+	<div id="confirm-form" class="tab-pane">
+        </div>
+	<div id="story" class="tab-pane">
+	</div>
+	<div id="driving" class="tab-pane">
+		<h3><a href="<%= venue_map_link %>" target="_blank"><%= venue_address %></a></h3>
+		<a href="../img/<%= venue_map %>"><img class="imgframe" src="../img/<%= venue_map_small %>" /></a>
+		<%= venue_driving_direction %>
+	</div>
+	<div id="contact" class="tab-pane" style="height:100px">
+		<a href="<%= flickr_link %>" target="_blank" class="btn btn-large btn-primary">Check our flickr album</a>
+	</div>
+   </div>
+   <!--<img class="love" src="../img/love.gif" alt="">-->
+</div>
+</div>
